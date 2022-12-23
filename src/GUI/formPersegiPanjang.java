@@ -6,7 +6,7 @@ package GUI;
 import Data.*;
 import javax.swing.JOptionPane;
 import java.sql.ResultSet;
-import javax.swing.table.*;;
+import javax.swing.table.*;
 /**
  *
  * @author DEWATA
