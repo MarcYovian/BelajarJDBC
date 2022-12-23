@@ -3,7 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package GUI;
+// import images.*;
 import javax.swing.Icon;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -39,6 +41,11 @@ public class formMenuBD extends javax.swing.JFrame {
 
         btnPersegiPanjang.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnPersegiPanjang.setText("Persegi Panjang");
+        btnPersegiPanjang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPersegiPanjangActionPerformed(evt);
+            }
+        });
 
         btnTrapesium.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnTrapesium.setText("Trapesium");
@@ -53,7 +60,7 @@ public class formMenuBD extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(50, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1)
@@ -77,11 +84,18 @@ public class formMenuBD extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
     private void btnTrapesiumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrapesiumActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnTrapesiumActionPerformed
+
+    private void btnPersegiPanjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPersegiPanjangActionPerformed
+        // TODO add your handling code here:
+        new formPersegiPanjang().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnPersegiPanjangActionPerformed
 
     /**
      * @param args the command line arguments
