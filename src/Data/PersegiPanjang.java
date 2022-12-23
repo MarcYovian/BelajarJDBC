@@ -35,7 +35,7 @@ public class PersegiPanjang extends abstrakClass {
         this.id_bangun = id_bangun;
         this.luas = luas;
         String s1 = "update persegi_panjang set no_bangun = '"
-        +this.id_bangun+"'" + ", panjang = '"+this.panjang+"', lebar '"+this.lebar+"', luas= '" +
+        +this.id_bangun+"'" + ", panjang = '"+this.panjang+"', lebar = '"+this.lebar+"', luas= '" +
         this.luas+"' where no_bangun = '"+this.id_bangun+"'";
         db.query(s1);
     }

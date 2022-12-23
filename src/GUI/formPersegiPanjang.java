@@ -197,6 +197,7 @@ public class formPersegiPanjang extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnHitungLuasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungLuasActionPerformed
@@ -224,14 +225,14 @@ public class formPersegiPanjang extends javax.swing.JFrame {
         double luas = Double.parseDouble(txtLuas.getText());
         try {
             PersegiPanjang p1 = new PersegiPanjang(p,l);
-            if (txtLuas.getText() == null || txtId.getText() == null){
+            if ((txtLuas.getText() == null) || (txtId.getText() == null)){
                 throw new Exception();
             }else{
                 p1.simpanPersegiPanjang(id, luas);
                 JOptionPane.showMessageDialog(null, "Insertnya berhasil!");
             }
         }catch (Exception e){
-            JOptionPane.showMessageDialog(null, e+ "ID atau Luas harus diisi!");
+            JOptionPane.showMessageDialog(null, e + "ID atau Luas harus diisi!");
         }
     }                                            
 
@@ -265,6 +266,9 @@ public class formPersegiPanjang extends javax.swing.JFrame {
         ResultSet rs = null;
         try{
             rs = db.getData("select * from persegi_panjang");
+//            if(rs.first()==null){
+//                
+//            }
             while (rs.next()){
                 tblOutput.setValueAt(rs.getString("no_bangun"), i, 0);
                 tblOutput.setValueAt(rs.getString("panjang"), i, 1);
@@ -280,12 +284,30 @@ public class formPersegiPanjang extends javax.swing.JFrame {
 
     private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
         // TODO add your handling code here:
-        int id = Integer.parseInt(txtId.getText());
-        double p = Double.parseDouble(txtPanjang.getText());
-        double l = Double.parseDouble(txtLebar.getText());
-        double luas = Double.parseDouble(txtLuas.getText());
-        PersegiPanjang p1 = new PersegiPanjang(p,l);
-        p1.hapusPersegiPanjang();
+//        int id = Integer.parseInt(txtId.getText());
+//        double p = Double.parseDouble(txtPanjang.getText());
+//        double l = Double.parseDouble(txtLebar.getText());
+//        double luas = Double.parseDouble(txtLuas.getText());
+//        PersegiPanjang p1 = new PersegiPanjang(p,l);
+//        p1.hapusPersegiPanjang();
+        int ans = JOptionPane.showConfirmDialog(this, "Apakah anda yakin ingin menghapus ?");
+        // 0 : yes
+        // 1 : no 
+        // 2 : cancel
+        PersegiPanjang p1 = new PersegiPanjang(0,0);
+        switch (ans) {
+            case JOptionPane.YES_OPTION:
+                JOptionPane.showMessageDialog(this, "Data Anda Terhapus!");
+//               ersegiPanjang p1 = new PersegiPanjang(0,0);
+                p1.hapusPersegiPanjang();
+                break;
+            case JOptionPane.NO_OPTION:
+                JOptionPane.showMessageDialog(this, "Tidak !");
+                break;
+            case JOptionPane.CANCEL_OPTION:
+                JOptionPane.showMessageDialog(this, "Cancel !");
+                break;
+        }
     }//GEN-LAST:event_btnHapusActionPerformed
 
     /**
