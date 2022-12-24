@@ -225,7 +225,7 @@ public class formPersegiPanjang extends javax.swing.JFrame {
         double luas = Double.parseDouble(txtLuas.getText());
         try {
             PersegiPanjang p1 = new PersegiPanjang(p,l);
-            if ((txtLuas.getText() == null) || (txtId.getText() == null)){
+            if((txtLuas.getText() == null) || (txtId.getText() == null)){
                 throw new Exception();
             }else{
                 p1.simpanPersegiPanjang(id, luas);
