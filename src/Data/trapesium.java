@@ -28,9 +28,8 @@ public class trapesium extends abstrakClass{
         koneksi db = new koneksi();
         this.id_trapesium = id_trapesium;
         this.luas = luas;
-        String s = "insert into trapesium (id_trapesium, panjang_atas, panjang_bawah, tinggi, luas)"
-        + "values ('"+this.id_trapesium+"'" + ", '"+this.panjangAtas+"', '"+this.panjangBawah+"', '" +
-        this.tinggi+"', '"+ this.luas +"') ";
+        String s = "INSERT INTO trapesium (id_trapesium, panjang_atas, panjang_bawah, tinggi, luas)"
+        + "VALUES ('"+this.id_trapesium+"', '"+this.panjangAtas+"', '"+this.panjangBawah+"', '" +this.tinggi+"', '"+ this.luas +"');";
         db.query(s);
     }
     
@@ -46,7 +45,7 @@ public class trapesium extends abstrakClass{
         this.luas = luas;
         String s1 = "update trapesium set id_trapesium = '"
         +this.id_trapesium+"'" + ", panjang_atas = '"+this.panjangAtas+"', panjang_bawah = '"+this.panjangBawah+"', tinggi = '"
-        + this.tinggi + "', luas= '" + this.luas+
+        + this.tinggi + "', luas = '" + this.luas+
         "' where id_trapesium = '"+this.id_trapesium+"'";
         db.query(s1);
     }

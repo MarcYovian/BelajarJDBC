@@ -89,6 +89,8 @@ public class formMenuBD extends javax.swing.JFrame {
     
     private void btnTrapesiumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrapesiumActionPerformed
         // TODO add your handling code here:
+        new Trapesium().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnTrapesiumActionPerformed
 
     private void btnPersegiPanjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPersegiPanjangActionPerformed
