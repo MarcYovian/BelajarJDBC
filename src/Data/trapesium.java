@@ -18,6 +18,7 @@ public class trapesium extends abstrakClass{
         this.tinggi = tinggi;
     }
     
+    @Override
     public double hitungLuas(){
         this.luas = ((panjangAtas+panjangBawah)*tinggi)/2;
         return luas;
