@@ -9,7 +9,7 @@ public class PersegiPanjang extends abstrakClass {
         this.panjang = panjang;
         this.lebar = lebar;
     }
-    // halo
+    @Override
     public double hitungLuas(){
         this.luas = panjang*lebar;
         return luas;
